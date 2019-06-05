@@ -1,0 +1,41 @@
+<h1>Sup, whicha cat?!</h1>
+
+<form action = '<%= cats_url %>' method='post'>
+  <label> Name:
+    <input type = 'text' name = 'cat[name]' value =''> 
+  </label>
+  <br><br>
+  <label> Birthdate:
+    <input type = 'date' name = 'cat[birth_date]' value =''> 
+  </label>
+  <br><br>
+  <label> Color:
+    <select name = 'cat[color]'>
+      <option value="brown">Brown</option>
+      <option value="white">White</option>
+      <option value="calico">Calico</option>
+      <option value="black">Black</option>
+      <option value="orange">Orange</option>
+      <option value="spotted">Spotted</option>
+    </select>
+
+  </label>
+  <br><br>
+  <label> Sex:
+    <select name = 'cat[sex]'>
+      <option value="F">F</option>
+      <option value="M">M</option>
+      <option value="TF">TF</option>
+      <option value="TM">TM</option>
+      <option value="NB">NB</option>
+    </select>
+  </label>
+  <br><br>
+  <label> Description</label>
+  <br><br>
+  <textarea name='cat[description]'></textarea>
+  <br><br>
+  
+  <input type='submit' value = 'This wassup!'>
+
+</form>

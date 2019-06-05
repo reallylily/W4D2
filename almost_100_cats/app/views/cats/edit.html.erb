@@ -1,0 +1,42 @@
+<h1>How you funna change this cat?!</h1>
+
+<form action = '<%= cat_url(@cat) %>' method='post'>
+  <input type='hidden' name='_method' value='patch'>
+  <label> Name:
+    <input type = 'text' name = 'cat[name]' value ='<%= @cat.name %>'> 
+  </label>
+  <br><br>
+  <label> Birthdate:
+    <input type = 'date' name = 'cat[birth_date]' value ='<%= @cat.birth_date %>'> 
+  </label>
+  <br><br>
+  <label> Color:
+    <select name = 'cat[color]'>
+    <% Cat::COLOR.each do |color| %>
+      <option value='<% color %>'
+      <%= @cat.color == color ? "selected" : ''%>
+      ><%= color %></option>
+    <% end %>
+    </select>
+
+  </label>
+  <br><br>
+  <label> Sex:
+
+    <select name = 'cat[sex]'>
+      <% Cat::SEX.each do |sex| %>
+      <option value=' <% sex %>'
+      <%= @cat.sex == sex ? "selected" : '' %>
+      ><%= sex %></option>
+    <% end %>
+    </select>
+  </label>
+  <br><br>
+  <label> Description</label>
+  <br><br>
+  <textarea name='cat[description]' value ='<%= @cat.description %>'></textarea>
+  <br><br>
+  
+  <input type='submit' value = 'This wassup!'>
+
+</form>
